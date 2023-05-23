@@ -18,14 +18,5 @@ def build_tool(config) -> Tool:
   sd = StableDiffusionTool()
   @tool.get("/get_stablediffusion")
   def get_stablediffusion(input : str)-> str:
-      job = sd.create_job(input)
-      while not job.done():
-        status = job.status()
-        print(f"\nJob Status: {str(status.code)} eta: {status.eta}")
-        time.sleep(30)
-      try:
-        output = sd.postprocess(job.result())
-      except QueueError:
-        output = "QUEUE_FULL"
-      return output
+      return sd.run(input)
   return tool
