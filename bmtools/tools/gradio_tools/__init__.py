@@ -24,3 +24,9 @@ def text_to_video():
 def text_to_video():
     from .image_captioning import build_tool
     return build_tool
+
+@register("document_qa")
+def text_to_video():
+    from .document_qa import build_tool
+    return build_tool
+    
