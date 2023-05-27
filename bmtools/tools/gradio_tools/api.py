@@ -15,14 +15,6 @@ def build_tool(config) -> Tool:
         contact_email="hello@contact.com",
         legal_info_url="hello@legal.com"
     )
-  
-
-  
-  
-  
-  
-  
-  
   @tool.get("/get_bark")
   def bark(input : str)-> str:
       '''Converting text into sounds that sound like a human read it.
