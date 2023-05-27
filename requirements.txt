@@ -13,3 +13,5 @@ sentencepiece
 faiss-cpu
 psycopg2
 pymysql
+gradio_client
+gradio_tools
