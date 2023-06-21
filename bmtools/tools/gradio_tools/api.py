@@ -58,7 +58,7 @@ def build_tool(config) -> Tool:
       im = ImageToMusicTool()
       return im.run(input)
   @tool.get("/get_audiotrans")
-  def imgtomsc(input : str)-> str:
+  def audiotrans(input : str)-> str:
       '''Transcribing an audio file track into text transcript.
       '''
       at = WhisperAudioTranscriptionTool()
